@@ -14,7 +14,7 @@ console.log('\n');
  * Array.prototype.map()
  * Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
  *
- * Op een array van objecten kan de "map"-methode worden toegepast.
+ * Op een array kan de "map"-methode worden toegepast.
  * De "map"-methode zal een nieuwe array teruggeven.
  * De parameter is een functie die wordt uitgevoerd op elk element van de array.
  */
@@ -57,7 +57,7 @@ console.log('\n');
  * Array.prototype.filter()
  * Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
  *
- * Op een array van objecten kan de "filter"-methode worden toegepast.
+ * Op een array kan de "filter"-methode worden toegepast.
  * De "filter"-methode zal een nieuwe array teruggeven.
  * De parameter is een functie die wordt uitgevoerd op elk element van de array.
  * Als de functie "true" teruggeeft, wordt het element toegevoegd aan de nieuwe array.
@@ -80,3 +80,39 @@ console.log('\n');
 
 console.log(`namesWithA is een array met ${namesWithA.length} elementen.`);
 console.log(`De namen van deze personen zijn: ${namesWithA.map((person) => person.name)}`);
+console.log('\n');
+
+/*
+ * Array.prototype.find()
+ * Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+ *
+ * Op een array kan de "find"-methode worden toegepast.
+ * De parameter is een functie die wordt uitgevoerd op elk element van de array.
+ * Als de functie "true" teruggeeft, wordt het element teruggegeven en zal de "find"-methode stoppen met zoeken.
+ */
+console.log('find()');
+console.log('------');
+const firstAdult = persons.find((person) => person.age >= 18);
+// De eerste iteratie evalueert "person.age >= 18" naar "false".
+// De tweede iteratie evalueert "person.age >= 18" naar "true".
+// De "find"-methode stopt met zoeken en geeft het element terug.
+console.log(`De eerste meerderjarige persoon in de array is: ${firstAdult.name}`);
+
+const firstPersonWithA = persons.find((person) => person.name.includes('i'));
+// De eerste iteratie evalueert "person.name.includes('i')" naar "false".
+// De tweede iteratie evalueert "person.name.includes('i')" naar "false".
+// De derde iteratie evalueert "person.name.includes('i')" naar "false".
+// De vierde iteratie evalueert "person.name.includes('i')" naar "true".
+// De "find"-methode stopt met zoeken en geeft het element terug.
+console.log(`De eerste persoon met een 'i' in de naam is: ${firstPersonWithA.name}`);
+
+const firstPersonWithZ = persons.find((person) => person.name.includes('z'));
+// Elke iteratie evalueert naar "false".
+// De "find"-methode stopt met zoeken en geeft "undefined" terug.
+if (firstPersonWithZ) {
+  console.log(`De eerste persoon met een 'z' in de naam is: ${firstPersonWithZ.name}`);
+} else {
+  // if (undefined) is hetzelfde als if (false) - de else wordt uitgevoerd.
+  console.log('Er is geen persoon met een "z" in de naam.');
+}
+console.log('\n');
