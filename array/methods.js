@@ -52,3 +52,31 @@ console.log('\n');
  * Indien er maar één statement is, zal er gebruikgemaakt worden van een impliciete return.
  * Indien er meerdere statements zijn, zal er gebruikgemaakt worden van een expliciete return.
  */
+
+/*
+ * Array.prototype.filter()
+ * Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+ *
+ * Op een array van objecten kan de "filter"-methode worden toegepast.
+ * De "filter"-methode zal een nieuwe array teruggeven.
+ * De parameter is een functie die wordt uitgevoerd op elk element van de array.
+ * Als de functie "true" teruggeeft, wordt het element toegevoegd aan de nieuwe array.
+ * Als de functie "false" teruggeeft, wordt het element niet toegevoegd aan de nieuwe array.
+ */
+console.log('filter()');
+console.log('--------');
+
+const adults = persons.filter((person) => person.age >= 18);
+const minors = persons.filter((person) => person.age < 18);
+const namesWithA = persons.filter((person) => person.name.includes('a'));
+
+console.log(`adults (meerderjarigen) is een array met ${adults.length} elementen.`);
+console.log(`De namen van deze personen zijn: ${adults.map((person) => person.name)}`); // zie map() voor uitleg
+console.log('\n');
+
+console.log(`minors (minderjarigen) is een array met ${minors.length} elementen.`);
+console.log(`De namen van deze personen zijn: ${minors.map((person) => person.name)}`); // zie map() voor uitleg
+console.log('\n');
+
+console.log(`namesWithA is een array met ${namesWithA.length} elementen.`);
+console.log(`De namen van deze personen zijn: ${namesWithA.map((person) => person.name)}`);
