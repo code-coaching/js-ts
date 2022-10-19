@@ -116,3 +116,15 @@ if (firstPersonWithZ) {
   console.log('Er is geen persoon met een "z" in de naam.');
 }
 console.log('\n');
+
+/*
+ * Array.prototype.findIndex()
+ * Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
+ *
+ * De "findIndex"-methode is hetzelfde als de "find"-methode, maar geeft de index van het gevonden element terug.
+ */
+console.log('findIndex()');
+console.log('-----------');
+const indexFirstAdult = persons.findIndex((person) => person.age >= 18);
+console.log(`De index van de eerste meerderjarige persoon in de array is: ${indexFirstAdult}`);
+console.log(`Dit is de persoon met de naam: ${persons[indexFirstAdult].name}`);
