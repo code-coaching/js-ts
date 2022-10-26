@@ -14,7 +14,9 @@ const persons = [
 
 /*
  * Gebruik de map methode om een array te maken met de namen van alle personen die ouder zijn dan 18 jaar.
- * Resultaat: [ 'Jane', 'Jack', 'Jill', 'Judy', 'Barry' ]
+ * Resultaat: [ undefined, undefined, 'Jack', 'Jill', 'Judy', 'Barry' ]
+ * Gebruik een `chained` filter methode om enkel waarden over te houden die niet undefined zijn.
+ * Resultaat: [ 'Jack', 'Jill', 'Judy', 'Barry' ]
  */
 
 /*

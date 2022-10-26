@@ -128,3 +128,17 @@ console.log('-----------');
 const indexFirstAdult = persons.findIndex((person) => person.age >= 18);
 console.log(`De index van de eerste meerderjarige persoon in de array is: ${indexFirstAdult}`);
 console.log(`Dit is de persoon met de naam: ${persons[indexFirstAdult].name}`);
+console.log('\n');
+
+/*
+ * Chaining functions
+ * Je kan functie die een nieuwe array teruggeven, aan elkaar koppelen.
+ */
+console.log('Chaining Methods');
+console.log('-----------');
+const adultNames = persons
+  .sort((a, b) => a.age > b.age)
+  .filter((person) => person.age >= 18)
+  .map((person) => person.name);
+
+console.log(`De namen van de meerderjarigen zijn: ${adultNames}`);

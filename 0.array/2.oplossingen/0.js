@@ -15,7 +15,7 @@ const names = persons.map((person) => person.name);
 /*
  * Gebruik de map methode om een array te maken met de namen van alle personen die ouder zijn dan 18 jaar.
  */
-const ages = persons.map((person) => person.age);
+const ages = persons.map((person) => (person.age > 18 ? person.name : undefined)).filter((name) => name !== undefined);
 
 /*
  * Gebruik de filter methode om een array te maken met alle personen die ouder zijn dan 18 jaar.
