@@ -1,16 +1,16 @@
 const getDogs = async () => {
+  /**
+   * Bezoek de url in de browser (of voer deze uit met een programma zoals Postman) om een voorbeeld te zien.
+   */
   return fetch('https://dog.ceo/api/breed/hound/images').then((response) => response.json());
 };
 
 (async () => {
   const response = await getDogs();
-  const urls = response.message;
-
-  const hondBloodImages = urls.filter((url) => url.includes('hound-blood'));
-  console.log(hondBloodImages);
-
-  const subUrls = urls.map((url) => url.split('https://images.dog.ceo/breeds/')[1]);
-  console.log(subUrls);
+  /*
+   * - Maak een nieuwe array waarin enkel afbeeldingen zitten van 'hond-blood' en log deze in de console.
+   * - Maak een nieuwe array waarin enkel het gedeelte van de string zit na "https://images.dog.ceo/breeds/" en log deze in de console.
+   */
 
   /*
    * Extra opdracht
