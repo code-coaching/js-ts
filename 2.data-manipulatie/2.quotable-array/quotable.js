@@ -1,5 +1,5 @@
 const getQuotes = async () => {
-  fetch('https://api.quotable.io/quotes?tags=technology,famous-quotes').then((response) => response.json());
+  return fetch('https://api.quotable.io/quotes?tags=technology,famous-quotes').then((response) => response.json());
   /**
    * Voorbeeld van een respons
    *
@@ -54,7 +54,6 @@ const getQuotes = async () => {
    *   ],
    * };
    */
-  console.log(data);
 };
 
 /*
