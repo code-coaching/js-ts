@@ -1,0 +1,1 @@
+Video waarin de oefeningen worden opgelost: https://youtu.be/OEUKmyIKFYE
