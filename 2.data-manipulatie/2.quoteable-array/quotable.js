@@ -78,8 +78,4 @@ const getQuotes = async () => {
    *    zorg dat er enkel objecten aanwezig zijn waarvan de quote langer is dan 70 karakters, log deze in de console.
    */
   console.log(quotes);
-
-  /*
-   * Zie index.html voor een extra uitdaging.
-   */
 })();
