@@ -8,7 +8,7 @@ const getDogs = async () => {
 (async () => {
   const response = await getDogs();
   /*
-   * - Maak een nieuwe array waarin enkel afbeeldingen zitten van 'hond-blood' en log deze in de console.
+   * - Maak een nieuwe array waarin enkel afbeeldingen zitten van 'hound-blood' en log deze in de console.
    * - Maak een nieuwe array waarin enkel het gedeelte van de string zit na "https://images.dog.ceo/breeds/" en log deze in de console.
    */
 
